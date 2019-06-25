@@ -1,0 +1,39 @@
+{
+  "name": "accelerator-tool-cli",
+  "version": "0.1.0",
+  "description": "The logic and non-CLI portions of the Accelerator devtool.",
+  "author": "furkle",
+  "license": "GPL-3.0",
+  "main": "index.js",
+  "keywords": [
+    "accelerator",
+    "if",
+    "hypertext",
+    "fiction"
+  ],
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "colorful-logging": "^1.2.0",
+    "commander": "^2.19.0",
+    "esm": "^3.2.7",
+    "fs-extra": "^7.0.1",
+    "handlebars": "^4.1.0",
+    "ifid": "^1.1.1",
+    "ts-assertions": "^1.0.11",
+    "validate-npm-package-name": "^3.0.0"
+  },
+  "devDependencies": {
+    "jest": "^24.1.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "bugs": {
+    "url": "https://github.com/furkleindustries/accelerator-tool-cli/issues"
+  },
+  "homepage": "https://github.com/furkleindustries/accelerator-tool-cli#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/furkleindustries/accelerator-tool-cli.git"
+  }
+}
