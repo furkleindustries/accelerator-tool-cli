@@ -3,6 +3,9 @@
 		{
 			"path": "."
 		}
-	],
-	"settings": {}
+  ],
+  "settings": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
+  }
 }

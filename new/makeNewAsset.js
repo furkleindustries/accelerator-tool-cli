@@ -53,6 +53,18 @@ export async function makeNewAsset({
     }),
   ];
 
+  /* Generate the authoring MDX (markdown+react) passage. */
+  if (type === 'passage') {
+    generateAssetCodeFile({
+      config,
+      name,
+      newAssetDir,
+      templatesDir,
+      type,
+      codeExtension: 'mdx',
+    });
+  }
+
   if (!noTests) {
     promises.push(generateAssetTestFile({
       codeExtension,

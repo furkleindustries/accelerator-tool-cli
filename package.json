@@ -1,6 +1,6 @@
 {
   "name": "accelerator-tool-cli",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "The logic and non-CLI portions of the Accelerator devtool.",
   "author": "furkle",
   "license": "GPL-3.0",
