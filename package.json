@@ -1,7 +1,7 @@
 {
   "name": "accelerator-tool-cli",
-  "version": "0.2.0",
-  "description": "The logic and non-CLI portions of the Accelerator devtool.",
+  "version": "0.2.1",
+  "description": "All the code for the Accelerator devtool.",
   "author": "furkle",
   "license": "GPL-3.0",
   "main": "index.js",
