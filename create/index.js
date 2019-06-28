@@ -6,6 +6,9 @@ import {
   installCore,
 } from './installCore';
 import {
+  installNonNodeDependencies,
+} from './installNonNodeDependencies';
+import {
   installProject,
 } from './installProject';
 import {
@@ -49,6 +52,7 @@ export async function create(name, directory) {
   ]);
 
   await installProject(directory);
+  await installNonNodeDependencies();
 
   log(
     `Finished creating story "${chalk.bold(name)}" at ` +

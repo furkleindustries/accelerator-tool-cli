@@ -1,6 +1,6 @@
 {
   "name": "accelerator-tool-cli",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "All the code for the Accelerator devtool.",
   "author": "furkle",
   "license": "GPL-3.0",
@@ -13,7 +13,7 @@
   ],
   "dependencies": {
     "chalk": "^2.4.2",
-    "colorful-logging": "^1.2.0",
+    "colorful-logging": "^1.2.2",
     "commander": "^2.19.0",
     "esm": "^3.2.7",
     "fs-extra": "^7.0.1",

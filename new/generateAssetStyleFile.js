@@ -20,9 +20,8 @@ export async function generateAssetStyleFile({
 {
   const styleTemplatePath = path.join(
     templatesDir,
-    `${type}.` +
-      (noCssModules ? 'nomodule.' : '') +
-      (forceCss ? 'css' : 'scss'),
+    `${type}.${(noCssModules ? 'nomodule.' : '')}` +
+      `${(forceCss ? 'css' : 'less')}`,
   );
 
   log(`Reading style template from "${chalk.bold(styleTemplatePath)}".`);
@@ -36,7 +35,7 @@ export async function generateAssetStyleFile({
     name,
   });
 
-  const newStylePath = path.join(newAssetDir, name + '.scss');
+  const newStylePath = path.join(newAssetDir, `${name}.scss`);
 
   log(`Writing style template to "${chalk.bold(newStylePath)}".`);
 
