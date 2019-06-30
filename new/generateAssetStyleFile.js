@@ -2,13 +2,16 @@ import chalk from 'chalk';
 import {
   log,
 } from 'colorful-logging';
-import * as fs from 'fs-extra';
+import {
+  readFile,
+  writeFile,
+} from 'fs-extra';
 import {
   makeTemplateReplacements,
 } from '../functions/makeTemplateReplacements';
 import * as path from 'path';
 
-export async function generateAssetStyleFile({
+export const generateAssetStyleFile = async ({
   config,
   forceCss,
   name,
@@ -16,7 +19,7 @@ export async function generateAssetStyleFile({
   noCssModules,
   templatesDir,
   type,
-})
+}) =>
 {
   const styleTemplatePath = path.join(
     templatesDir,
@@ -26,7 +29,7 @@ export async function generateAssetStyleFile({
 
   log(`Reading style template from "${chalk.bold(styleTemplatePath)}".`);
 
-  const data = await fs.readFile(styleTemplatePath, 'utf8');
+  const data = await readFile(styleTemplatePath, 'utf8');
   log('Rewriting style template.');
 
   const rewrittenData = makeTemplateReplacements({
@@ -35,9 +38,9 @@ export async function generateAssetStyleFile({
     name,
   });
 
-  const newStylePath = path.join(newAssetDir, `${name}.scss`);
+  const newStylePath = path.join(newAssetDir, `${name}.less`);
 
   log(`Writing style template to "${chalk.bold(newStylePath)}".`);
 
-  await fs.writeFile(newStylePath, rewrittenData);
-}
+  await writeFile(newStylePath, rewrittenData);
+};
