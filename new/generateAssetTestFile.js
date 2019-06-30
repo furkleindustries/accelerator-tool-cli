@@ -19,7 +19,7 @@ export async function generateAssetTestFile({
 {
   const testTemplatePath = path.join(
     templatesDir,
-    `${type}.test${codeExtension}`,
+    `${type}.test.${codeExtension}`,
   );
 
   log(`Reading test template from "${chalk.bold(testTemplatePath)}".`);
@@ -34,7 +34,7 @@ export async function generateAssetTestFile({
     name,
   });
 
-  const newTestPath = path.join(newAssetDir, `${name}.test${codeExtension}`);
+  const newTestPath = path.join(newAssetDir, `${name}.test.${codeExtension}`);
 
   log(`Writing test template to "${chalk.bold(newTestPath)}".`);
 

@@ -40,7 +40,7 @@ export async function makeNewAsset({
 
   await fs.mkdir(newAssetDir);
 
-  const codeExtension = forceJavaScript ? '.jsx' : '.tsx';
+  const codeExtension = forceJavaScript ? 'jsx' : 'tsx';
 
   const promises = [
     generateAssetCodeFile({

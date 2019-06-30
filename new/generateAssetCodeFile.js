@@ -17,7 +17,7 @@ export async function generateAssetCodeFile({
   type,
 })
 {
-  const codeTemplatePath = path.join(templatesDir, `${type}${codeExtension}`);
+  const codeTemplatePath = path.join(templatesDir, `${type}.${codeExtension}`);
 
   log(`Reading code template from "${chalk.bold(codeTemplatePath)}".`);
 
@@ -31,7 +31,7 @@ export async function generateAssetCodeFile({
     name,
   });
 
-  const newCodePath = path.join(newAssetDir, `${name}${codeExtension}`);
+  const newCodePath = path.join(newAssetDir, `${name}.${codeExtension}`);
 
   log(`Writing code template to "${chalk.bold(newCodePath)}".`);
 
