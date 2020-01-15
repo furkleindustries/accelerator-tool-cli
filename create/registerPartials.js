@@ -18,11 +18,10 @@ export const registerPartials = (directory) => (
         return reject(err);
       }
 
-      const basenames = matches
-        .map((aa) => basename(aa))
-        .filter((aa) => aa !== 'index.hbs');
-
+      const fixedFiles = matches.filter((aa) => !aa.endsWith('index.hbs'));
+      const basenames = fixedFiles.map((aa) => basename(aa))
       let files;
+
       try {
         files = await Promise.all(
           basenames.map((path) => readFile(path, 'utf8')),
