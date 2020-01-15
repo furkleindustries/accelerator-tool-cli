@@ -8,7 +8,7 @@ import {
 import * as path from 'path';
 
 export async function rewriteConfig(directory, name, coreVersion) {
-  const toolPackageJson = require(path.join(__filename, '..', 'package.json'));
+  const toolPackageJson = require(path.join(__dirname, '..', 'package.json'));
   const toolVersion = toolPackageJson.version;
 
   const defPath = path.join(directory, 'src', 'configuration', 'defaults');
