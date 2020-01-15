@@ -19,12 +19,15 @@ export const registerPartials = (directory) => (
       }
 
       const fixedFiles = matches.filter((aa) => !aa.endsWith('index.hbs'));
-      const basenames = fixedFiles.map((aa) => basename(aa))
+      const basenames = fixedFiles.map((aa) => (
+        basename(aa).slice(0, -3)
+      ));
+
       let files;
 
       try {
         files = await Promise.all(
-          basenames.map((path) => readFile(path, 'utf8')),
+          files.map((path) => readFile(path, 'utf8')),
         );
       } catch (err) {
         return reject(err);
@@ -32,7 +35,7 @@ export const registerPartials = (directory) => (
 
       files.forEach((content, index) => (
         registerPartial(basenames[index], content)
-      ))
+      ));
 
       return resolve();
     }),
