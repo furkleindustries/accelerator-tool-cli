@@ -18,6 +18,7 @@
     "esm": "^3.2.7",
     "fs-extra": "^7.0.1",
     "handlebars": "^4.1.0",
+    "hasbin": "^1.2.3",
     "ifid": "^1.1.1",
     "ts-assertions": "^1.0.11",
     "validate-npm-package-name": "^3.0.0"
