@@ -1,7 +1,7 @@
 {
   "name": "accelerator-tool-cli",
-  "version": "0.2.5",
-  "description": "All the code for the Accelerator devtool.",
+  "version": "0.3.0",
+  "description": "All the code for the Accelerator devtool. Generally invoked by accelerator-tool or xlr8r.",
   "author": "furkle",
   "license": "GPL-3.0",
   "main": "index.js",
@@ -17,7 +17,7 @@
     "commander": "^2.19.0",
     "esm": "^3.2.7",
     "fs-extra": "^7.0.1",
-    "handlebars": "^4.1.0",
+    "handlebars": "^4.7.2",
     "hasbin": "^1.2.3",
     "ifid": "^1.1.1",
     "ts-assertions": "^1.0.11",
