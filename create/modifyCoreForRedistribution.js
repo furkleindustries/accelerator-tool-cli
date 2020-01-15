@@ -2,14 +2,17 @@ import {
   log,
 } from 'colorful-logging';
 import {
+  registerPartials,
+} from './registerPartials';
+import {
   renameCodeWorkspace,
 } from './renameCodeWorkspace';
 import {
   rewriteConfig,
 } from './rewriteConfig';
 import {
-  rewriteIndexHtml,
-} from './rewriteIndexHtml';
+  rewriteIndexHbs,
+} from './rewriteIndexHbs';
 import {
   rewritePackageJson,
 } from './rewritePackageJson';
@@ -20,11 +23,12 @@ import {
 export async function modifyCoreForRedistribution(directory, name, coreVersion) {
   log('Modifying core for redistribution.');
 
+  await registerPartials(directory);
   const config = await rewriteConfig(directory, name, coreVersion);
 
   await Promise.all([
     renameCodeWorkspace(directory, name),
-    rewriteIndexHtml(directory, config, name),
+    rewriteIndexHbs(directory, config, name),
     rewritePackageJson(directory, name),
     rewriteTslint(directory),
   ]);
