@@ -8,9 +8,9 @@ import {
 import * as path from 'path';
 
 export async function rewriteIndexHtml(directory, config, name) {
-  log('Rewriting index.html.');
+  log('Rewriting index.hbs.');
 
-  const indexPath = path.join(directory, 'templates', 'index.html');
+  const indexPath = path.join(directory, 'templates', 'index.hbs');
   const data = await fs.readFile(indexPath, 'utf8');
 
   const rewrittenData = makeTemplateReplacements({
