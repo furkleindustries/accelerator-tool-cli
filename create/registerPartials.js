@@ -11,7 +11,7 @@ import {
 } from 'path';
 
 export const registerPartials = (directory) => (
-  new Promise((resolve, reject) => glob(
+  new Promise(async (resolve, reject) => glob(
     join(directory, 'templates', '*.hbs'),
     (err, matches) => {
       if (err) {
@@ -36,6 +36,6 @@ export const registerPartials = (directory) => (
       ))
 
       return resolve();
-    })
+    }),
   )
 );
