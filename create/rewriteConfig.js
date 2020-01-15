@@ -11,7 +11,7 @@ export async function rewriteConfig(directory, name, coreVersion) {
   const toolPackageJson = require(path.join(__dirname, '..', 'package.json'));
   const toolVersion = toolPackageJson.version;
 
-  const defPath = path.join(directory, 'src', 'configuration', 'defaults');
+  const defPath = path.join(directory, 'src', 'configuration', 'configurationDefaults');
   const { defaults } = require(defPath);
   const ifid = new IFID().toString();
   const config = {

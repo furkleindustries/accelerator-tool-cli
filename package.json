@@ -1,6 +1,6 @@
 {
   "name": "accelerator-tool-cli",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "description": "All the code for the Accelerator devtool. Generally invoked by accelerator-tool or xlr8r.",
   "author": "furkle",
   "license": "GPL-3.0",
