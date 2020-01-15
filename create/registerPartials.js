@@ -11,9 +11,9 @@ import {
 } from 'path';
 
 export const registerPartials = (directory) => (
-  new Promise(async (resolve, reject) => glob(
+  new Promise((resolve, reject) => glob(
     join(directory, 'templates', '*.hbs'),
-    (err, matches) => {
+    async (err, matches) => {
       if (err) {
         return reject(err);
       }
