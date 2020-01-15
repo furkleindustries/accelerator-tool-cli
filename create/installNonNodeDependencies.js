@@ -14,7 +14,7 @@ export const installNonNodeDependencies = async () => {
     'pip',
     (err) => {
       if (err) {
-        return reject(err);
+        return reject(String(err));
       }
 
       return resolve();
@@ -24,7 +24,7 @@ export const installNonNodeDependencies = async () => {
   let failed = false;
   checkProm.catch((err) => {
     failed = true;
-    warn(err);
+    warn(String(err));
   });
 
   await checkProm;
@@ -54,7 +54,7 @@ export const installNonNodeDependencies = async () => {
 
   installProm.catch((err) => {
     failed = true;
-    warn(err);
+    warn(String(err));
   });
 
   await installProm;

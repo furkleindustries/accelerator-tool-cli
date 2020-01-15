@@ -1,6 +1,6 @@
 import {
   log,
-} from 'colorful-logging/log';
+} from 'colorful-logging';
 import * as fs from 'fs-extra';
 import * as path from 'path';
 

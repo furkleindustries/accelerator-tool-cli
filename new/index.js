@@ -4,7 +4,7 @@ import {
 } from './checkForFilepathReqs';
 import {
   log,
-} from 'colorful-logging/log';
+} from 'colorful-logging';
 import {
   getAssetCreationFunction,
 } from './getAssetCreationFunction';
