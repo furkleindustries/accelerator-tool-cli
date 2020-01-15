@@ -20,10 +20,10 @@ export function installCore(directory) {
     'accelerator-core',
   ];
 
-  const spawnArgs = { cwd: directory };
+  const spawnArgs = { cwd: directory, };
   const child = spawn(cmd, args, spawnArgs);
-  child.stdout.on('data', npmLogWithColor);
-  child.stderr.on('data', npmErrorWithColor);
+  child.stdout.on('data', (data) => npmLogWithColor(data.toString()));
+  child.stderr.on('data', (data) => npmErrorWithColor(data.toString()));
 
   return new Promise((resolve, reject) => {
     child.on('exit', (code) => {
