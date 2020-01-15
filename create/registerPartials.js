@@ -27,7 +27,7 @@ export const registerPartials = (directory) => (
 
       try {
         files = await Promise.all(
-          files.map((path) => readFile(path, 'utf8')),
+          fixedFiles.map((path) => readFile(path, 'utf8')),
         );
       } catch (err) {
         return reject(err);
